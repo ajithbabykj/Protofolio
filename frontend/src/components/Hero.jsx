@@ -70,13 +70,24 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right Content - Stats & Visual */}
+          {/* Right Content - Professional Photo & Stats */}
           <div className="relative">
-            {/* Professional Photo Placeholder */}
+            {/* Professional Photo */}
             <div className="relative mx-auto w-80 h-80 lg:w-96 lg:h-96">
               <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-orange-600 rounded-full opacity-20 animate-pulse"></div>
-              <div className="absolute inset-4 bg-gradient-to-r from-gray-800 to-gray-900 rounded-full flex items-center justify-center text-white text-6xl font-bold">
-                AB
+              <div className="absolute inset-4 rounded-full overflow-hidden border-4 border-white shadow-2xl">
+                <img 
+                  src="https://customer-assets.emergentagent.com/job_tech-innovator-15/artifacts/6vywwm9b_image.png"
+                  alt="Ajith Baby - Mechatronics Engineer"
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    e.target.nextSibling.style.display = 'flex';
+                  }}
+                />
+                <div className="hidden w-full h-full bg-gradient-to-r from-gray-800 to-gray-900 flex items-center justify-center text-white text-6xl font-bold">
+                  AB
+                </div>
               </div>
               
               {/* Floating Stats */}
