@@ -44,11 +44,11 @@ const About = () => {
               </h3>
               
               <p className="text-lg text-gray-700 leading-relaxed">
-                With over 9 years of hands-on experience in mechatronics engineering, I specialize in creating sophisticated systems that seamlessly integrate mechanical design, electronics, and intelligent software control. My journey spans from precision aerospace components to consumer IoT products.
+                With over 10 years of pioneering experience in mechatronics engineering, I architect revolutionary systems that seamlessly integrate mechanical precision, advanced electronics, and intelligent AI-driven control. My expertise spans from classified defense projects for India's premier organizations (DRDO, ISRO, HAL) to breakthrough consumer technologies that redefine market standards.
               </p>
               
               <p className="text-lg text-gray-700 leading-relaxed">
-                I thrive on solving complex engineering challenges, leading cross-functional teams, and driving innovation from concept to market. My expertise in advanced CAD tools, thermal analysis, and manufacturing optimization has consistently delivered products that exceed performance expectations while meeting strict quality standards.
+                As an early adopter and master of emerging technologies, I specialize in AI-powered automation, predictive analytics, and intelligent system integration. My proven ability to transform complex engineering challenges into market-leading solutions has consistently delivered products that not only meet but exceed performance expectations while pioneering new technological frontiers.
               </p>
             </div>
 
