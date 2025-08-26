@@ -73,6 +73,46 @@ async def get_status_checks():
     status_checks = await db.status_checks.find().to_list(1000)
     return [StatusCheck(**status_check) for status_check in status_checks]
 
+@api_router.post("/contact", response_model=ContactResponse)
+async def submit_contact_form(
+    contact_data: ContactSubmissionCreate,
+    request: Request = None
+):
+    try:
+        # Create contact submission object
+        contact_dict = contact_data.dict()
+        contact_obj = ContactSubmission(**contact_dict)
+        
+        # Add IP address if available
+        if request:
+            contact_obj.ip_address = getattr(request.client, 'host', None)
+        
+        # Save to database
+        result = await db.contact_submissions.insert_one(contact_obj.dict())
+        
+        if result.inserted_id:
+            return ContactResponse(
+                success=True,
+                message="Thank you for your message! I will get back to you soon.",
+                id=contact_obj.id
+            )
+        else:
+            raise HTTPException(status_code=500, detail="Failed to save contact submission")
+            
+    except Exception as e:
+        logger.error(f"Error saving contact submission: {str(e)}")
+        raise HTTPException(status_code=500, detail="Internal server error")
+
+@api_router.get("/contact", response_model=List[ContactSubmission])
+async def get_contact_submissions():
+    """Admin endpoint to retrieve contact submissions"""
+    try:
+        submissions = await db.contact_submissions.find().sort("submitted_at", -1).to_list(100)
+        return [ContactSubmission(**submission) for submission in submissions]
+    except Exception as e:
+        logger.error(f"Error retrieving contact submissions: {str(e)}")
+        raise HTTPException(status_code=500, detail="Internal server error")
+
 # Include the router in the main app
 app.include_router(api_router)
 
