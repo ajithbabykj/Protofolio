@@ -39,7 +39,7 @@ const Experience = () => {
 
                 {/* Content Card */}
                 <div className={`w-full md:w-5/12 ${index % 2 === 0 ? 'md:mr-auto md:pr-16' : 'md:ml-auto md:pl-16'} ml-20 md:ml-0`}>
-                  <div className="bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200">
+                  <div className="bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200 overflow-hidden">
                     {/* Company & Role */}
                     <div className="mb-6">
                       <h3 className="text-2xl font-bold text-gray-900 mb-2">{job.role}</h3>
@@ -80,8 +80,28 @@ const Experience = () => {
                   </div>
                 </div>
 
-                {/* Spacer for timeline */}
-                <div className="hidden md:block w-2/12"></div>
+                {/* Professional Image - opposite side of content */}
+                <div className={`hidden md:block w-5/12 ${index % 2 === 0 ? 'md:ml-auto md:pl-16' : 'md:mr-auto md:pr-16'}`}>
+                  <div className="relative h-80 rounded-2xl overflow-hidden shadow-lg group">
+                    <img 
+                      src={experienceImages[index]} 
+                      alt={`Professional equipment for ${job.company}`}
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      onError={(e) => {
+                        e.target.src = `data:image/svg+xml,%3Csvg width='400' height='320' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='400' height='320' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%236b7280' font-size='18'%3EEngineering Excellence%3C/text%3E%3C/svg%3E`;
+                      }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p className="text-sm font-medium">
+                        {index === 0 && "Smart IoT Systems & Consumer Technology"}
+                        {index === 1 && "Industrial Dispensing & Automation Systems"}
+                        {index === 2 && "Defense & Aerospace Testing Equipment"}
+                        {index === 3 && "Precision Calibration & Measurement Tools"}
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
