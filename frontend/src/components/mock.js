@@ -7,7 +7,8 @@ export const personalInfo = {
   phone: "+91 9489 137711",
   location: "Bangalore, India",
   linkedin: "linkedin.com/in/ajithbaby",
-  profileSummary: "Dynamic Mechatronics Engineer with 9+ years of expertise in designing and developing cutting-edge systems across consumer products, industrial applications, and robotics. Proven ability to lead cross-functional teams, drive product innovation, and optimize manufacturability using advanced engineering tools and methodologies."
+  availabilityStatus: "Available for groundbreaking high-tech ventures",
+  profileSummary: "Visionary Mechatronics Engineer with 10+ years of pioneering expertise in architecting revolutionary systems across Defense & Aerospace, Consumer Technology, and Industrial Automation. Master of AI-driven solutions and next-generation automation technologies. Proven track record of transforming complex engineering challenges into breakthrough products for India's most critical sectors including DRDO, ISRO, HAL, and cutting-edge startups. Early adopter of emerging technologies with deep specialization in precision engineering, system integration, and intelligent automation solutions."
 };
 
 export const skills = {
