@@ -12,7 +12,7 @@ const About = () => {
     {
       icon: <Award className="text-orange-600" size={24} />,
       title: "Defense & Aerospace Excellence", 
-      description: "Trusted by India's premier defense organizations including DRDO, ISRO, and HAL for critical national projects requiring highest precision and reliability."
+      description: "Delivered numerous trusted engineering solutions for India's Defense and Aerospace sectors including DRDO laboratories, ISRO centers, HAL facilities, Indian Air Force, Navy, Railways, and premier research institutions."
     },
     {
       icon: <Lightbulb className="text-orange-600" size={24} />,
