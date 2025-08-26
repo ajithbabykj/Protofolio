@@ -105,10 +105,10 @@ const Footer = () => {
               <div className="mt-8 p-4 bg-green-900/20 rounded-lg border border-green-800">
                 <div className="flex items-center mb-2">
                   <div className="w-3 h-3 bg-green-500 rounded-full mr-2 animate-pulse"></div>
-                  <span className="text-green-400 font-medium">Available for Opportunities</span>
+                  <span className="text-green-400 font-medium">Available for Breakthrough Ventures</span>
                 </div>
                 <p className="text-gray-400 text-sm">
-                  Open to new engineering challenges and collaborations
+                  Seeking revolutionary high-tech challenges and disruptive innovations
                 </p>
               </div>
             </div>
