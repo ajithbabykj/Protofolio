@@ -13,10 +13,10 @@ export const personalInfo = {
 
 export const skills = {
   "Design & CAD": ["SolidWorks", "Creo", "Fusion 360", "AutoCAD", "CATIA V5"],
-  "AI & Automation": ["AI-Driven System Design", "Machine Learning Integration", "Intelligent Automation", "Predictive Analytics", "Neural Network Applications"],
   "Simulation & Analysis": ["MATLAB", "FEA", "DFMA", "GD&T", "Tolerance Stack-up", "Computational Modeling"],
-  "Advanced Technologies": ["IoT Integration", "Thermal Management", "Sensor Technology", "Robotics", "Edge Computing", "Digital Twins"],
-  "Leadership & Innovation": ["Project Management", "Technology Scouting", "Cross-functional Leadership", "Strategic Innovation", "R&D Direction"]
+  "Manufacturing & Testing": ["DFM/DFA", "FMEA", "Validation", "Quality Assurance", "Process Optimization", "Precision Metrology"],
+  "Technologies": ["IoT Integration", "Thermal Management", "Sensor Technology", "Automation", "Robotics"],
+  "Leadership": ["Project Management", "Cross-functional Leadership", "Technology Implementation", "Strategic Innovation", "R&D Direction"]
 };
 
 export const experience = [
