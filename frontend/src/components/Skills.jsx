@@ -100,9 +100,9 @@ const Skills = () => {
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Technical Proficiencies</h3>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="text-3xl font-bold text-orange-600 mb-2">Advanced</div>
-                <div className="text-gray-600">CAD & Design</div>
-                <div className="text-sm text-gray-500 mt-1">9+ Years Experience</div>
+                <div className="text-3xl font-bold text-orange-600 mb-2">Expert</div>
+                <div className="text-gray-600">AI & Automation</div>
+                <div className="text-sm text-gray-500 mt-1">Early Technology Adopter</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-orange-600 mb-2">Expert</div>
