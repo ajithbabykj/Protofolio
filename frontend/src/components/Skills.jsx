@@ -105,9 +105,9 @@ const Skills = () => {
                 <div className="text-sm text-gray-500 mt-1">Early Technology Adopter</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-orange-600 mb-2">Expert</div>
-                <div className="text-gray-600">System Integration</div>
-                <div className="text-sm text-gray-500 mt-1">Cross-domain Expertise</div>
+                <div className="text-3xl font-bold text-orange-600 mb-2">Pioneer</div>
+                <div className="text-gray-600">Defense & Aerospace</div>
+                <div className="text-sm text-gray-500 mt-1">DRDO/ISRO/HAL Projects</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-orange-600 mb-2">Proven</div>
