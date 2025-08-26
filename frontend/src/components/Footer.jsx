@@ -54,7 +54,7 @@ const Footer = () => {
               </div>
               
               <p className="text-gray-300 leading-relaxed max-w-md">
-                Visionary Mechatronics Engineer pioneering AI-driven automation solutions for India's most critical sectors. Trusted by DRDO, ISRO, and HAL for breakthrough engineering that defines tomorrow's technology landscape.
+                Visionary Mechatronics Engineer pioneering cutting-edge automation solutions for India's Defense, Aerospace, and critical infrastructure sectors. Delivered breakthrough engineering projects for premier organizations across DRDO, ISRO, HAL, Indian Air Force, Navy, Railways, and leading research institutions.
               </p>
               
               <div className="flex items-center space-x-2 text-gray-400">
