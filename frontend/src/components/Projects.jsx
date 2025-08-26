@@ -61,13 +61,26 @@ const Projects = () => {
               key={project.id}
               className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 overflow-hidden group"
             >
-              {/* Project Image Placeholder */}
+              {/* Project Image */}
               <div className="h-48 bg-gradient-to-br from-gray-200 to-gray-300 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-orange-600/20 flex items-center justify-center">
-                  <div className="text-4xl font-bold text-gray-600 opacity-50">
-                    {project.title.charAt(0)}
-                  </div>
-                </div>
+                {project.image ? (
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      e.target.src = `data:image/svg+xml,%3Csvg width='400' height='200' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='400' height='200' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%236b7280'%3E${project.title.charAt(0)}%3C/text%3E%3C/svg%3E`;
+                    }}
+                  />
+                ) : (
+                  <>
+                    <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-orange-600/20 flex items-center justify-center">
+                      <div className="text-4xl font-bold text-gray-600 opacity-50">
+                        {project.title.charAt(0)}
+                      </div>
+                    </div>
+                  </>
+                )}
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300"></div>
               </div>
 
