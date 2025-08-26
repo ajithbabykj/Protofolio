@@ -53,14 +53,14 @@ export const experience = [
     location: "Bangalore, India",
     duration: "Nov 2017 - May 2023",
     achievements: [
-      "Engineered sophisticated Wind Tunnel Balance systems (Strain Gauge Balances) for India's premier defense organizations: DRDO (DRDL), ISRO (VSSC), and HAL - achieving unprecedented precision in aerospace testing",
+      "Engineered sophisticated Wind Tunnel Balance systems (Strain Gauge Balances) for India's Defense and Aerospace sectors including DRDO (DRDL), ISRO (VSSC), HAL, NAL, and other premier research facilities - achieving unprecedented precision in aerospace testing",
       "Developed cutting-edge thrust measurement systems for ROTEX916 Sport Aircraft Engine, enabling critical performance validation for Indian aviation sector",
       "Pioneered automated torque wrench calibration systems integrating AI-driven precision control, revolutionizing maintenance protocols across defense establishments",
       "Executed comprehensive strain measurement campaigns on aircraft structures, satellite bodies, and high-voltage transmission towers, contributing to national infrastructure security",
       "Designed specialized testing equipment for Delhi Metro (BMRCL) including fatigue, static, cyclic, drop, and frequency analysis systems ensuring passenger safety standards",
       "Led ILRT (Integrated Leak Rate Testing) strain measurement projects for Nuclear Reactor containment systems, supporting India's clean energy initiatives",
-      "Innovated hand-held Tensiometer systems for Indian Air Force wire rope tension validation, enhancing aircraft maintenance efficiency",
-      "Developed precision tooth force sensors for dental applications, demonstrating cross-industry innovation capabilities"
+      "Innovated hand-held Tensiometer systems for Indian Air Force and Navy wire rope tension validation, enhancing defense maintenance efficiency",
+      "Developed precision instrumentation for Indian Railways and other critical infrastructure projects, demonstrating versatile engineering capabilities across sectors"
     ]
   },
   {
