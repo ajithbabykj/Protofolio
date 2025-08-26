@@ -6,18 +6,18 @@ const About = () => {
   const highlights = [
     {
       icon: <Target className="text-orange-600" size={24} />,
-      title: "Innovation Focus",
-      description: "Specialized in developing cutting-edge mechatronic systems that bridge mechanical, electrical, and software engineering."
+      title: "AI-Driven Innovation",
+      description: "Pioneer in integrating artificial intelligence and machine learning into mechanical systems, creating next-generation automated solutions that learn and adapt."
     },
     {
       icon: <Award className="text-orange-600" size={24} />,
-      title: "Industry Recognition", 
-      description: "Led development of India's first AI-driven sleep ecosystem and advanced industrial automation solutions."
+      title: "Defense & Aerospace Excellence", 
+      description: "Trusted by India's premier defense organizations including DRDO, ISRO, and HAL for critical national projects requiring highest precision and reliability."
     },
     {
       icon: <Lightbulb className="text-orange-600" size={24} />,
-      title: "Problem Solver",
-      description: "Proven track record of optimizing manufacturing processes and reducing operational costs through innovative design."
+      title: "Technology Visionary",
+      description: "Early adopter and implementation expert of cutting-edge technologies, consistently delivering breakthrough solutions that set new industry benchmarks."
     }
   ];
 
