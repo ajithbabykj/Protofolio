@@ -11,27 +11,27 @@ const Skills = () => {
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "AI & Automation", 
-      icon: <Cpu className="text-purple-600" size={28} />,
-      skills: skills["AI & Automation"],
-      color: "from-purple-500 to-indigo-500"
-    },
-    {
-      title: "Simulation & Analysis",
-      icon: <Settings className="text-blue-600" size={28} />,
+      title: "Simulation & Analysis", 
+      icon: <Cpu className="text-blue-600" size={28} />,
       skills: skills["Simulation & Analysis"],
-      color: "from-blue-500 to-cyan-500"
+      color: "from-blue-500 to-indigo-500"
     },
     {
-      title: "Advanced Technologies",
-      icon: <Zap className="text-green-600" size={28} />,
-      skills: skills["Advanced Technologies"],
+      title: "Manufacturing & Testing",
+      icon: <Settings className="text-green-600" size={28} />,
+      skills: skills["Manufacturing & Testing"],
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Leadership & Innovation",
+      title: "Technologies",
+      icon: <Zap className="text-purple-600" size={28} />,
+      skills: skills["Technologies"],
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      title: "Leadership",
       icon: <Users className="text-gray-600" size={28} />,
-      skills: skills["Leadership & Innovation"],
+      skills: skills["Leadership"],
       color: "from-gray-500 to-slate-500"
     }
   ];
