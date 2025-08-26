@@ -94,7 +94,7 @@ export const projects = [
     description: "India's pioneering non-invasive sleep monitoring ecosystem utilizing advanced sensor arrays, AI-powered sleep pattern analysis, and real-time health insights. Breakthrough technology eliminating wearable dependency while delivering clinical-grade sleep analytics.",
     technologies: ["Sensor Fusion", "AI Analytics", "Biomedical Engineering", "Data Science", "Creo"],
     category: "Healthcare Technology",
-    status: "Patent Pending",
+    status: "Market Ready",
     image: "https://images.unsplash.com/photo-1671459922221-be8beec5c9fa"
   },
   {
