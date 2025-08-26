@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import { personalInfo } from './mock';
-import { Mail, Phone, MapPin, Linkedin, Send, Clock, MessageSquare } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Send, Clock, MessageSquare, CheckCircle, AlertCircle } from 'lucide-react';
+import axios from 'axios';
+
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+const API = `${BACKEND_URL}/api`;
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -10,18 +14,84 @@ const Contact = () => {
     message: ''
   });
 
+  const [formState, setFormState] = useState({
+    isSubmitting: false,
+    isSubmitted: false,
+    error: null
+  });
+
   const handleInputChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
+    // Clear error when user starts typing
+    if (formState.error) {
+      setFormState(prev => ({ ...prev, error: null }));
+    }
   };
 
-  const handleSubmit = (e) => {
+  const validateForm = () => {
+    const errors = [];
+    
+    if (!formData.name.trim()) errors.push('Name is required');
+    if (!formData.email.trim()) errors.push('Email is required');
+    if (!formData.subject.trim()) errors.push('Subject is required');
+    if (!formData.message.trim() || formData.message.length < 10) {
+      errors.push('Message must be at least 10 characters long');
+    }
+    
+    // Basic email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (formData.email && !emailRegex.test(formData.email)) {
+      errors.push('Please enter a valid email address');
+    }
+    
+    return errors;
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Mock form submission
-    alert('Thank you for your message! I will get back to you soon.');
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    
+    // Validate form
+    const errors = validateForm();
+    if (errors.length > 0) {
+      setFormState({
+        isSubmitting: false,
+        isSubmitted: false,
+        error: errors.join(', ')
+      });
+      return;
+    }
+
+    setFormState({
+      isSubmitting: true,
+      isSubmitted: false,
+      error: null
+    });
+
+    try {
+      const response = await axios.post(`${API}/contact`, formData);
+      
+      if (response.data.success) {
+        setFormState({
+          isSubmitting: false,
+          isSubmitted: true,
+          error: null
+        });
+        // Reset form
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        throw new Error(response.data.message || 'Failed to send message');
+      }
+    } catch (error) {
+      console.error('Contact form error:', error);
+      setFormState({
+        isSubmitting: false,
+        isSubmitted: false,
+        error: error.response?.data?.detail || error.message || 'Failed to send message. Please try again.'
+      });
+    }
   };
 
   const contactMethods = [
