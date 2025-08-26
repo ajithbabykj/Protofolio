@@ -84,7 +84,7 @@ const Experience = () => {
           <h3 className="text-2xl font-bold text-gray-900 mb-6">Career Highlights</h3>
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <div className="text-3xl font-bold text-orange-600 mb-2">9+</div>
+              <div className="text-3xl font-bold text-orange-600 mb-2">10+</div>
               <div className="text-gray-700">Years of Experience</div>
             </div>
             <div>
