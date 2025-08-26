@@ -110,9 +110,9 @@ const Skills = () => {
                 <div className="text-sm text-gray-500 mt-1">DRDO/ISRO/HAL Projects</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-orange-600 mb-2">Proven</div>
-                <div className="text-gray-600">Project Leadership</div>
-                <div className="text-sm text-gray-500 mt-1">Multi-team Coordination</div>
+                <div className="text-3xl font-bold text-orange-600 mb-2">Visionary</div>
+                <div className="text-gray-600">Technology Leadership</div>
+                <div className="text-sm text-gray-500 mt-1">Innovation Strategy</div>
               </div>
             </div>
           </div>
