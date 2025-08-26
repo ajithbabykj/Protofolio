@@ -54,9 +54,7 @@ const Footer = () => {
               </div>
               
               <p className="text-gray-300 leading-relaxed max-w-md">
-                Innovative Mechatronics Engineer specializing in cutting-edge system design, 
-                automation solutions, and cross-functional team leadership. Transforming ideas 
-                into market-ready engineering solutions.
+                Visionary Mechatronics Engineer pioneering AI-driven automation solutions for India's most critical sectors. Trusted by DRDO, ISRO, and HAL for breakthrough engineering that defines tomorrow's technology landscape.
               </p>
               
               <div className="flex items-center space-x-2 text-gray-400">
