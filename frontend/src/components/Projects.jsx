@@ -13,12 +13,11 @@ const Projects = () => {
 
   const getCategoryColor = (category) => {
     const colors = {
-      'Consumer Products': 'bg-blue-100 text-blue-800',
+      'Consumer Technology': 'bg-blue-100 text-blue-800',
       'Healthcare Technology': 'bg-green-100 text-green-800',
       'Industrial Automation': 'bg-purple-100 text-purple-800',
-      'Industrial Tools': 'bg-orange-100 text-orange-800',
-      'Aerospace': 'bg-red-100 text-red-800',
-      'Manufacturing Tools': 'bg-gray-100 text-gray-800'
+      'Defense & Aerospace': 'bg-red-100 text-red-800',
+      'Manufacturing Intelligence': 'bg-orange-100 text-orange-800'
     };
     return colors[category] || 'bg-gray-100 text-gray-800';
   };
