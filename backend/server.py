@@ -56,6 +56,13 @@ class ContactResponse(BaseModel):
     message: str
     id: Optional[str] = None
 
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
+
 # Add your routes to the router instead of directly to app
 @api_router.get("/")
 async def root():
