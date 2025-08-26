@@ -12,7 +12,7 @@ const Hero = () => {
             <div className="space-y-4">
               <div className="inline-flex items-center px-4 py-2 bg-orange-100 text-orange-800 rounded-full text-sm font-medium">
                 <span className="w-2 h-2 bg-orange-600 rounded-full mr-2 animate-pulse"></span>
-                Available for new opportunities
+                {personalInfo.availabilityStatus}
               </div>
               
               <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
