@@ -3,6 +3,15 @@ import { experience } from './mock';
 import { MapPin, Calendar, CheckCircle } from 'lucide-react';
 
 const Experience = () => {
+  // Professional images for experience section
+  const experienceImages = [
+    "https://images.unsplash.com/photo-1708728428891-ce375314e569", // Precision calibration equipment
+    "https://images.unsplash.com/photo-1647427060118-4911c9821b82", // Industrial automation
+    "https://images.unsplash.com/photo-1627704671340-0969d7dbac25", // High-tech precision equipment  
+    "https://images.unsplash.com/photo-1703113688651-04deac46f539"  // Precision measurement tools
+  ];
+
+const Experience = () => {
   return (
     <section id="experience" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
