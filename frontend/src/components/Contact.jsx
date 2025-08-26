@@ -192,6 +192,22 @@ const Contact = () => {
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-6">
+              {/* Success Message */}
+              {formState.isSubmitted && (
+                <div className="bg-green-50 border border-green-200 rounded-lg p-4 flex items-center">
+                  <CheckCircle className="text-green-600 mr-3" size={20} />
+                  <p className="text-green-800">Thank you for your message! I will get back to you soon.</p>
+                </div>
+              )}
+
+              {/* Error Message */}
+              {formState.error && (
+                <div className="bg-red-50 border border-red-200 rounded-lg p-4 flex items-center">
+                  <AlertCircle className="text-red-600 mr-3" size={20} />
+                  <p className="text-red-800">{formState.error}</p>
+                </div>
+              )}
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -204,7 +220,8 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors"
+                    disabled={formState.isSubmitting}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors disabled:bg-gray-100 disabled:cursor-not-allowed"
                     placeholder="Your full name"
                   />
                 </div>
@@ -219,7 +236,8 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors"
+                    disabled={formState.isSubmitting}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors disabled:bg-gray-100 disabled:cursor-not-allowed"
                     placeholder="your.email@example.com"
                   />
                 </div>
@@ -236,7 +254,8 @@ const Contact = () => {
                   value={formData.subject}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors"
+                  disabled={formState.isSubmitting}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors disabled:bg-gray-100 disabled:cursor-not-allowed"
                   placeholder="What's this about?"
                 />
               </div>
@@ -252,22 +271,36 @@ const Contact = () => {
                   onChange={handleInputChange}
                   required
                   rows={6}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors resize-none"
+                  disabled={formState.isSubmitting}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors resize-none disabled:bg-gray-100 disabled:cursor-not-allowed"
                   placeholder="Tell me about your project or opportunity..."
                 ></textarea>
+                <div className="text-sm text-gray-500 mt-1">
+                  {formData.message.length}/2000 characters (minimum 10)
+                </div>
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-orange-600 text-white font-semibold py-4 px-6 rounded-lg hover:bg-orange-700 transition-colors duration-200 flex items-center justify-center shadow-lg hover:shadow-xl transform hover:scale-105"
+                disabled={formState.isSubmitting}
+                className="w-full bg-orange-600 text-white font-semibold py-4 px-6 rounded-lg hover:bg-orange-700 transition-colors duration-200 flex items-center justify-center shadow-lg hover:shadow-xl transform hover:scale-105 disabled:bg-gray-400 disabled:cursor-not-allowed disabled:transform-none disabled:shadow-none"
               >
-                <Send size={20} className="mr-2" />
-                Send Message
+                {formState.isSubmitting ? (
+                  <>
+                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                    Sending Message...
+                  </>
+                ) : (
+                  <>
+                    <Send size={20} className="mr-2" />
+                    Send Message
+                  </>
+                )}
               </button>
             </form>
 
             <p className="text-sm text-gray-500 text-center mt-4">
-              I typically respond within 24 hours during business days.
+              {formState.isSubmitting ? 'Processing your message...' : 'I typically respond within 24 hours during business days.'}
             </p>
           </div>
         </div>
