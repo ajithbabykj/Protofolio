@@ -132,7 +132,7 @@ const Projects = () => {
                   </button>
                   <div className="flex items-center text-gray-500 text-sm">
                     <Calendar size={14} className="mr-1" />
-                    2023-2024
+                    
                   </div>
                 </div>
               </div>
@@ -145,7 +145,7 @@ const Projects = () => {
           <h3 className="text-2xl font-bold text-gray-900 text-center mb-8">Project Impact</h3>
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-3xl font-bold text-orange-600 mb-2">6</div>
+              <div className="text-3xl font-bold text-orange-600 mb-2">20+</div>
               <div className="text-gray-600">Major Projects</div>
               <div className="text-sm text-gray-500 mt-1">Completed Successfully</div>
             </div>
@@ -161,7 +161,7 @@ const Projects = () => {
             </div>
             <div>
               <div className="text-3xl font-bold text-orange-600 mb-2">3</div>
-              <div className="text-gray-600">Patents</div>
+              <div className="text-gray-600">   </div>
               <div className="text-sm text-gray-500 mt-1">Innovation Recognition</div>
             </div>
           </div>
