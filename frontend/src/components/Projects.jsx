@@ -124,15 +124,7 @@ const Projects = () => {
                   </div>
                 </div>
 
-                {/* Project Actions */}
-                <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-                  <button className="flex items-center text-orange-600 hover:text-orange-700 font-medium transition-colors">
-                    <ExternalLink size={16} className="mr-2" />
-                    
-                  </button>
-                  <div className="flex items-center text-gray-500 text-sm">
-                    <Calendar size={14} className="mr-1" />
-                    
+                
                   </div>
                 </div>
               </div>
